@@ -32,7 +32,11 @@ export default function Attractions() {
         update[feild] = v
 
         setinfo(update)
-        console.log(info)
+        // console.log(info)
+    }
+
+    async function Of_setLogin() {
+        
     }
     
     if(isLoading) {
@@ -52,7 +56,7 @@ export default function Attractions() {
                 </Text>
                 <Image
                     style={styles.avatar}
-                    source={require('../assets/wh.png')}
+                    source={require('../../assets/wh.png')}
                 />
                 <Text
                     category='h6'
@@ -76,6 +80,7 @@ export default function Attractions() {
                     appearance='filled'
                     style={styles.button}
                     status='primary'
+                    onPress={() => {Of_setLogin()}}
                 >
                     เข้าสู่ระบบ
                 </Button>

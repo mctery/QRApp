@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import Login from './src/home/Login';
+import Login from './src/view/home/Login';
 // import AttractionDetails from './src/home/AttractionDetails'
 
 const Stack = createNativeStackNavigator();
