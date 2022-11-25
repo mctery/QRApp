@@ -13,9 +13,9 @@ import {
     Input,
     Avatar
 } from '@ui-kitten/components';
-// import AttractionCard from './AttractionCard';
+import { F_setUserLogin } from '../../service/user_service';
 
-export default function Attractions() {
+export default function Login(props) {
     const [isLoading, setisLoading] = React.useState(true);
     const [info, setinfo] = React.useState({user: '', pass: ''});
 
@@ -36,7 +36,7 @@ export default function Attractions() {
     }
 
     async function Of_setLogin() {
-        
+        let res = F_setUserLogin(info)
     }
     
     if(isLoading) {
@@ -84,6 +84,15 @@ export default function Attractions() {
                 >
                     เข้าสู่ระบบ
                 </Button>
+                <Button
+                    size='small'
+                    appearance='ghost'
+                    style={styles.button}
+                    status='primary'
+                    onPress={() => props.navigation.navigate('สมัครใช้งาน')}
+                >
+                    สมัครใช้งาน
+                </Button>
             </Layout>
         );
     }
@@ -105,7 +114,7 @@ const styles = StyleSheet.create({
         width: '100%'
     },
     button: {
-        margin: 2,
+        margin: 10,
     },
     avatar: {
         margin: 8,
