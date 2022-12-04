@@ -36,7 +36,13 @@ export default function Login(props) {
     }
 
     async function Of_setLogin() {
-        let res = F_setUserLogin(info)
+        let res = await F_setUserLogin(info)
+        if(res.STATUS === 'SUCCESS') {
+            props.navigation.navigate('หน้าแรก')
+            console.log('onLogin',res)
+        } else {
+            console.log('not found')
+        }
     }
     
     if(isLoading) {
