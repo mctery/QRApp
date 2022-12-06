@@ -25,7 +25,7 @@ export default function Main(props) {
         initial()
         const backHandler = BackHandler.addEventListener('hardwareBackPress', () => true)
         return () => backHandler.remove()
-    }, [])
+    },)
 
     async function initial() {
         let info = await DBget_getUserInformation()
